@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+<TITLE>HTML 2.0 Browser Comparison Test</TITLE>
+</HEAD>
+<BODY>
+
+<H1>HTML 2.0 Browser Comparison Test</H1>
+<P>This page exercises the core HTML 2.0 tag set. Load it in Mosaic and Netscape side by side and compare rendering. No tables, no CSS, no JavaScript — just RFC 1866.</P>
+
+<HR>
+
+<H2>Headings</H2>
+<H1>Heading 1</H1>
+<H2>Heading 2</H2>
+<H3>Heading 3</H3>
+<H4>Heading 4</H4>
+<H5>Heading 5</H5>
+<H6>Heading 6</H6>
+
+<HR>
+
+<H2>Text-Level Markup</H2>
+<P>
+<B>Bold text</B> and <I>italic text</I> and <TT>monospace text</TT>.<BR>
+<EM>Emphasis</EM> and <STRONG>strong emphasis</STRONG>.<BR>
+<CODE>Code snippet</CODE>, <KBD>keyboard input</KBD>, <SAMP>sample output</SAMP>, <VAR>variable name</VAR>.<BR>
+<CITE>A citation reference</CITE>.
+</P>
+
+<BLOCKQUOTE>
+This is a blockquote. It should render indented from the margin, and is a good candidate for testing whether a browser applies any distinct styling beyond simple indentation.
+</BLOCKQUOTE>
+
+<ADDRESS>
+Test Page Author, Somewhere on the Web, 1996
+</ADDRESS>
+
+<HR>
+
+<H2>Preformatted Text</H2>
+<PRE>
+This text preserves      spacing
+and line breaks exactly as typed.
+    Indented line.
+Useful for ASCII art or code samples.
+</PRE>
+
+<HR>
+
+<H2>Lists</H2>
+
+<H3>Unordered List</H3>
+<UL>
+  <LI>First item
+  <LI>Second item
+  <LI>Third item, with a nested list:
+    <UL>
+      <LI>Nested item one
+      <LI>Nested item two
+    </UL>
+</UL>
+
+<H3>Ordered List</H3>
+<OL>
+  <LI>Step one
+  <LI>Step two
+  <LI>Step three
+</OL>
+
+<H3>Definition List</H3>
+<DL>
+  <DT>HTML
+  <DD>HyperText Markup Language
+  <DT>DTD
+  <DD>Document Type Definition
+</DL>
+
+<HR>
+
+<H2>Links and Anchors</H2>
+<P>
+A link to <A HREF="https://example.com/">an external page</A> (won't resolve without networking).<BR>
+A link to <A HREF="#bottom">an anchor further down this page</A>.
+</P>
+
+<HR>
+
+<H2>Image</H2>
+<P>
+The line below attempts to load a local image called <TT>test.gif</TT>, which won't exist unless you supply one. This tests how each browser handles a missing image and renders ALT text.
+</P>
+<IMG SRC="test.gif" ALT="[Test Image]" ALIGN="left">
+<P>Text should flow alongside the image if ALIGN="left" is honored by the browser.</P>
+
+<HR>
+
+<H2>Basic Form (non-functional without networking)</H2>
+<FORM METHOD="POST" ACTION="/cgi-bin/test.cgi">
+Name: <INPUT TYPE="text" NAME="username"><BR>
+Password: <INPUT TYPE="password" NAME="pass"><BR>
+Subscribe: <INPUT TYPE="checkbox" NAME="subscribe"><BR>
+Choice:
+<INPUT TYPE="radio" NAME="choice" VALUE="a">A
+<INPUT TYPE="radio" NAME="choice" VALUE="b">B<BR>
+Comments:<BR>
+<TEXTAREA NAME="comments" ROWS="4" COLS="40"></TEXTAREA><BR>
+Options:
+<SELECT NAME="options">
+  <OPTION>One
+  <OPTION>Two
+  <OPTION>Three
+</SELECT><BR>
+<INPUT TYPE="submit" VALUE="Send">
+</FORM>
+
+<HR>
+
+<H2>Character Entities</H2>
+<P>
+Less than: &lt; &nbsp; Greater than: &gt; &nbsp; Ampersand: &amp; &nbsp; Quote: &quot; &nbsp; Copyright: &copy;
+</P>
+
+<HR>
+
+<A NAME="bottom"></A>
+<H2>End of Test Page</H2>
+<P>If you jumped here via the anchor link above, anchor navigation works.</P>
+
+</BODY>
+</HTML>
